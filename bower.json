@@ -1,0 +1,20 @@
+{
+  "name": "pilot",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yeehaa123/cth-site",
+  "authors": [
+    "Jan Hein Hoogstad <yeehaa123@mac.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.1.1+2",
+    "modernizr": "~2.8.2"
+  }
+}

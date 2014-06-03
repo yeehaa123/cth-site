@@ -1,0 +1,10 @@
+---
+title: Home
+---
+{{#each tags}}
+  {{#is tag 'frontpage'}}
+    {{#withSort pages 'data.order'}}
+      {{> snippet this}}
+    {{/withSort}}
+  {{/is}}
+{{/each}}

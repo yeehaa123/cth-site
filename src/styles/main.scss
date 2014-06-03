@@ -1,0 +1,80 @@
+@font-face {
+  font-family: NittyNormal;
+  src: url('../fonts/NN.woff') format('woff');
+}
+
+@font-face {
+  font-family: NittyBold;
+  src: url('../fonts/NB.woff') format('woff');
+}
+
+$navbar-height: 80px;
+$brand-primary: #E5CF39 !default;
+
+$font-family-monospace:   NittyNormal, Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-monospace !default;
+
+@import "../vendor/bootstrap/stylesheets/bootstrap";
+
+@media (min-width: $screen-sm-min) {
+  .jumbotron {
+    padding-top: $jumbotron-padding + 100px;
+  }
+}
+
+.navbar {
+  font-size: 20px;
+  margin-bottom: 0;
+  svg {
+    fill: #999999; 
+    fill: $brand-primary; 
+    padding: 0;
+    width: 80px;
+  }
+
+  .navbar-brand {
+    padding: 10px 15px;
+  }
+}
+
+.hero-image {
+  svg {
+    fill: $brand-primary; 
+    visibility: hidden;
+  }
+  width: 100%;
+  height: 60vw;
+  background-image: url('http://ethosworld.com/library/library6.jpg');
+  &:hover {
+    svg {
+      visibility: visible;
+    }
+  }
+}
+
+
+.page-header {
+  background: $brand-primary;
+  height: 100px;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 10px;
+
+  h1 {
+    font-family: NittyBold;
+    vertical-align: middle;
+  }
+}
+
+.snippet {
+  h1 {
+    color: black;
+    text-underline: none;
+  }
+}
+
+.gist .gist-file {
+  .gist-meta {
+    display: none !important;
+  }
+}

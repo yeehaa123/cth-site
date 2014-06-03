@@ -23,8 +23,9 @@ paths =
  
 options =
   data: 'data/*.json',
-  partials: 'src/templates/partials/**/*.hbs'
-  layoutdir: 'templates/layouts/'
+  partials: 'src/templates/partials/**/*.{hbs,md}'
+  layout: 'default.hbs'
+  layoutdir: 'src/templates/layouts'
 
 gulp.task 'assets', ->
   gulp.src paths.assets
@@ -36,7 +37,7 @@ gulp.task 'vendor', ->
     .pipe(gulp.dest('dist/vendor'))
 
 gulp.task 'assemble', ->
-    gulp.src('src/templates/pages/*.hbs')
+    gulp.src('src/pages/*.hbs')
         .pipe(assemble(options))
         .pipe(gulp.dest('dist/'))
 
