@@ -8,28 +8,37 @@
   src: url('../fonts/NB.woff') format('woff');
 }
 
-$navbar-height: 80px;
-$brand-primary: #E5CF39 !default;
+$yellow: #E5CF39;
+$green: #A5CC45;
+$blue: #75C7B3;
+$red: #E34D2F;
 
-$font-family-monospace:   NittyNormal, Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-monospace !default;
+$labelColors: $yellow, $green, $blue, $red;
+
+$navbar-height: 50px;
+$brand-primary: $yellow !default;
+
+$font-family-monospace: NittyNormal, Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base: $font-family-monospace !default;
 
 @import "../vendor/bootstrap/stylesheets/bootstrap";
 
-@media (min-width: $screen-sm-min) {
-  .jumbotron {
-    padding-top: $jumbotron-padding + 100px;
-  }
+body {
+  background: #e5e5e5;
 }
 
 .navbar {
-  font-size: 20px;
+  font-size: 1.1em;
   margin-bottom: 0;
+
   svg {
-    fill: #999999; 
-    fill: $brand-primary; 
+    fill: #333333; 
     padding: 0;
-    width: 80px;
+    width: 50px;
+
+    &:hover {
+      fill: $brand-primary; 
+    }
   }
 
   .navbar-brand {
@@ -38,43 +47,146 @@ $font-family-base:        $font-family-monospace !default;
 }
 
 .hero-image {
+  #logo {
+    display: block;
+  }
+
+  #logo-text {
+    display: none;
+  }
+
   svg {
-    fill: $brand-primary; 
-    visibility: hidden;
+    fill: #222222; 
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
   }
   width: 100%;
-  height: 60vw;
-  background-image: url('http://ethosworld.com/library/library6.jpg');
+  height: 95vh;
+  @media (orientation:portrait) {
+    height: 30vh;
+  }
+
+  background-color: $blue;
+
+  // background-image: url('../images/library6.jpg');
+
   &:hover {
-    svg {
-      visibility: visible;
+    background: $brand-primary;
+    #logo {
+      display: none;
+    }
+
+    #logo-text {
+      display: block;
+    }
+  }
+}
+
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+#main {
+  border-top: 4px solid $blue;
+}
+
+.snippet {
+  svg {
+    fill: #222222;
+    background: $blue; 
+    padding: 40px 200px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+
+    &:hover {
+      fill: $red;
+    }
+  }
+
+  background-color: #e5e5e5;
+  margin: 0px -15px;
+  img {
+    -webkit-column-span: all;
+    column-span: all;
+    width: 100%;
+  }
+
+  .page-header {
+    background-color: #222222;
+    margin: 0px 0px;
+    border-bottom-width: 0px;
+    border-bottom: 4px solid $blue;
+    padding: 20px;
+    user-select: none;
+
+    h1 {
+      margin: 0;
+      font-size: 1.3em;
+      color: #e5e5e5;
+      font-family: NittyNormal;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    .page-header {
+      background-color: #222222;
+      margin: 0px 0px;
+      border-bottom-width: 0px;
+      border-bottom: 4px solid $brand-primary; 
+      padding: 20px;
+      user-select: none;
     }
   }
 }
 
 
-.page-header {
-  background: $brand-primary;
-  height: 100px;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px;
+.article {
+  margin: 1.5em 25px;
+  column-gap: 50px;
+  column-count: 2;
+  text-align: justify;
 
-  h1 {
+  a {
     font-family: NittyBold;
-    vertical-align: middle;
   }
 }
 
-.snippet {
-  h1 {
-    color: black;
-    text-underline: none;
+@media (max-width: $screen-xs-max) {
+  .article {
+    column-count: 1;
+  } 
+}
+
+@media (min-width: $screen-lg-min) { 
+  .article {
+    column-count: 3;
   }
 }
+
+
 
 .gist .gist-file {
   .gist-meta {
     display: none !important;
   }
 }
+
+// @for $i from 1 to 4 {
+//   $level-color: nth($labelColors, $i + 1);
+//   .snippet:nth-child(#{$i}n + #{$i}){
+//     .page-header {
+//       background-color: $level-color;
+//     }
+//   }
+// }
+

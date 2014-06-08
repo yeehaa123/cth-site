@@ -25,7 +25,17 @@
     <div class="span12">
       <div class="full-width hero-image" >
         
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 424 244" enable-background="new 0 0 424 244" xml:space="preserve">
+
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 424 244" enable-background="new 0 0 424 244" xml:space="preserve">
+  <g></g>
+  <rect x="18" y="18" width="282" height="65" class="style0"/>
+  <rect x="18" y="90" width="174" height="65" class="style0"/>
+  <rect x="18" y="162" width="388" height="65" class="style0"/>
+  </g>
+</svg>
+  
+        
+<svg id="logo-text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 424 244" enable-background="new 0 0 424 244" xml:space="preserve">
   <g>
   <g>
   <path d="M84.6 44.143c-4.02 0-6.3 2.1-6.3 7.44s2.28 7.4 6.3 7.44c4.02 0 6.299-2.1 6.299-7.44 S88.619 44.1 84.6 44.143z" class="logo"/>
@@ -49,20 +59,22 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" 
-                data-toggle="collapse" 
-                data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
+  <div id="#nav-wrapper">
+    <nav id="nav" class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" 
+                  data-toggle="collapse" 
+                  data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 424 244" enable-background="new 0 0 424 244" xml:space="preserve">
+          <a class="navbar-brand" href="#">
+
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 424 244" enable-background="new 0 0 424 244" xml:space="preserve">
   <g></g>
   <rect x="18" y="18" width="282" height="65" class="style0"/>
   <rect x="18" y="90" width="174" height="65" class="style0"/>
@@ -70,29 +82,32 @@
   </g>
 </svg>
 </a>
-      </div>
-      <div class="navbar-collapse navbar-right collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" 
-             data-toggle="dropdown">sign in <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
+
+        </div>
+        <div class="navbar-collapse navbar-right collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#main">blog</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" 
+                 data-toggle="dropdown">sign in <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
           </ul>
-          </li>
-        </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
 
-      <section class='col-md-12'>
+      <section id="main" class='main col-md-12'>
         
 
 Coding the Humanities is not about technology or even programming. It is all about tools. Software is a blind spot for the humanities. While our discipline is deeply invested in self-reflection, we hardly ever think about the digital tools that we use to produce and disseminate these deep thoughts. As a result, we fail to see the obvious. The applications that facilitate our teaching and research, were not written for us, let alone developed by us. In fact, they are unfit for our needs.
@@ -116,6 +131,8 @@ Deliberate use of tools marks the difference between craftmanship and dumb labor
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="vendor/bootstrap/collapse.js"></script>
         <script src="vendor/bootstrap/dropdown.js"></script>
+        <script src="vendor/bootstrap/affix.js"></script>
+
         <!-- <script src="js/main.js"></script> -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -125,6 +142,14 @@ Deliberate use of tools marks the difference between craftmanship and dumb labor
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+
+            $('.snippet .collapse').first().addClass('in');
+
+            $('#nav-wrapper').height($("#nav").height());
+
+            $('#nav').affix({
+              offset: { top: $('#nav').offset().top }
+            });
         </script>
     </body>
 </html>

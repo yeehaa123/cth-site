@@ -16,7 +16,7 @@ module.exports = (grunt) ->
     watch:
       sass:
         files: 'src/styles/**/*.scss'
-        tasks: 'sass'
+        tasks: 'css'
 
       html:
         files: 'src/**/*.{hbs,md}'
@@ -38,7 +38,12 @@ module.exports = (grunt) ->
     sass:
       dist:
         src: 'src/styles/main.scss'
-        dest: 'dist/styles/main.css'
+        dest: 'src/styles/main.css'
+
+     autoprefixer:
+        dist:
+          src: 'src/styles/main.css'
+          dest: 'dist/styles/main.css'
 
     assemble:
       options:
@@ -52,10 +57,13 @@ module.exports = (grunt) ->
         src: 'src/pages/**/*.{hbs,md}'
         dest: 'dist/'
   
-  grunt.registerTask 'default', ['bowercopy', 'copy', 'sass', 'assemble']
+  grunt.registerTask 'css', ['sass', 'autoprefixer']
+
+  grunt.registerTask 'default', ['bowercopy', 'copy', 'css', 'assemble']
 
   grunt.loadNpmTasks 'grunt-sass'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'assemble'
   grunt.loadNpmTasks 'grunt-bowercopy'

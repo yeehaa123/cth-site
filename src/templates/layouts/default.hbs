@@ -19,7 +19,7 @@
       <![endif]-->
 
       {{> header }}
-      <section class='col-md-12'>
+      <section id="main" class='main col-md-12'>
         {{> body }}
       </section>
       <footer>
@@ -28,6 +28,8 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="vendor/bootstrap/collapse.js"></script>
         <script src="vendor/bootstrap/dropdown.js"></script>
+        <script src="vendor/bootstrap/affix.js"></script>
+
         <!-- <script src="js/main.js"></script> -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -37,6 +39,14 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+
+            $('.snippet .collapse').first().addClass('in');
+
+            $('#nav-wrapper').height($("#nav").height());
+
+            $('#nav').affix({
+              offset: { top: $('#nav').offset().top }
+            });
         </script>
     </body>
 </html>

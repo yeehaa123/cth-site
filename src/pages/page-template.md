@@ -6,5 +6,3 @@ published: false
 tags:
 - frontpage
 ---
-
-Goodbye World
