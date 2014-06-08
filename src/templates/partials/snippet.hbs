@@ -9,10 +9,12 @@
     {{#if data.svg}}
       {{> hammer }}
     {{/if}}
-    <section class='article'>
-      {{#markdown}}
-        {{{page}}}
-      {{/markdown}}
-    </section>
+    {{#unless data.empty}}
+      <section class='article'>
+        {{#markdown}}
+          {{{page}}}
+        {{/markdown}}
+      </section>
+    {{/unless}}
   </div>
 </section>

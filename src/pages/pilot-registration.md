@@ -1,11 +1,11 @@
 ---
 title: Pilot Registration
 posted: 2014-28-5 20:23:12 
-order: 1
+order: 3
 tags: 
 - frontpage
 ---
-[Coding the Humanities](http:://www.codingthehumanities.com) is the title of a pioneering course which will familiarize humanities students with basic programming skills over the period of a month (starting June 2). This highly intensive, yet enjoyable experimental crash course not only aims at providing students a hands-on experience of coding and exploring an online workplace, but also aspires to introduce a new, practical-oriented model of research through programming, where researchers are free to develop and apply their own tools. The course allows students to investigate digital data from the perspective of the humanities.
+[Coding the Humanities](http://www.codingthehumanities.com) is the title of a pioneering course which will familiarize humanities students with basic programming skills over the period of a month (starting June 2). This highly intensive, yet enjoyable experimental crash course not only aims at providing students a hands-on experience of coding and exploring an online workplace, but also aspires to introduce a new, practical-oriented model of research through programming, where researchers are free to develop and apply their own tools. The course allows students to investigate digital data from the perspective of the humanities.
 
 Contrary to the bias against technology that is still dominant in academic circles, and to the conviction that certain disciplines are –or should– be excluded from the digital world, Coding the Humanities implements new unlimited practices of digital literacy, while challenging situated knowledge. By the end of the course, students will have reached an intermediate level of the latest standards in HTML, CSS and JavaScript, be able to develop browser-based widgets and be able to develop tools for humanities’ research. This enables students to translate complex theoretical problems into smaller, practical projects. As such, the pilot is part of a larger move to create an eHumanities lab at the UvA.
         

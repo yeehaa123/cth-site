@@ -4597,6 +4597,10 @@ body {
       font-family: NittyNormal; }
     .snippet .page-header a {
       text-decoration: none; }
+  .snippet .collapse {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 4px solid #75C7B3; }
   .snippet:hover .page-header {
     background-color: #222222;
     margin: 0px 0px;
@@ -4604,9 +4608,11 @@ body {
     border-bottom: 4px solid #E5CF39;
     padding: 20px;
     user-select: none; }
+  .snippet:hover .collapse {
+    border-bottom: 4px solid #E5CF39; }
 
 .article {
-  margin: 1.5em 25px;
+  padding: 1.5em 25px 1.5em 25px;
   column-gap: 50px;
   column-count: 2;
   text-align: justify; }
