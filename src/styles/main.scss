@@ -25,8 +25,7 @@ $font-family-base: $font-family-monospace !default;
 
 body {
   background: #e5e5e5;
-}
-
+} 
 .navbar {
   font-size: 1.1em;
   margin-bottom: 0;
@@ -55,6 +54,12 @@ body {
     display: none;
   }
 
+  .carousel-inner .logo-slide {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
   svg {
     fill: #222222; 
     height: 100%;
@@ -65,13 +70,12 @@ body {
   }
   width: 100%;
   height: 95vh;
+
   @media (orientation:portrait) {
     height: 30vh;
   }
 
   background-color: $blue;
-
-  // background-image: url('../images/library6.jpg');
 
   &:hover {
     background: $brand-primary;
@@ -83,6 +87,19 @@ body {
       display: block;
     }
   }
+}
+
+.presentation {
+  .hero-image {
+    height: 95vh;
+  }
+}
+
+#carousel-header {
+
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+  } 
 }
 
 #nav.affix {
@@ -157,46 +174,213 @@ body {
       border-bottom: 4px solid $brand-primary;
     }
   }
-
 }
 
 .article {
   padding: 1.5em 25px 1.5em 25px;
   column-gap: 50px;
   column-count: 2;
-  text-align: justify;
+
+  p {
+    widows: 2;
+  }
+
+  h1, h2, h3 {
+    color: $blue;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
 
   a {
+    display: inline-block;
+    padding: 0.1em 0.3em;
+    background-color: $yellow;
+    color: #222222;
     font-family: NittyBold;
+
+    &:hover {
+      background-color: #222222;
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+      column-count: 1;
+  }
+
+  @media (min-width: $screen-lg-min) { 
+      column-count: 3;
   }
 }
 
-@media (max-width: $screen-xs-max) {
-  .article {
-    column-count: 1;
-  } 
-}
 
-@media (min-width: $screen-lg-min) { 
-  .article {
-    column-count: 3;
+.navbar-nav {
+ .slide-number.active {
+    a {
+      color: $red;
+    }
   }
 }
 
+.slide.active {
+  margin: 0;
+  width: 100%;
+  height: 95vh;
+  color: #222222;
+
+  &.title-slide, &.section-title {
+    background-color: #e5e5e5;
+    font-family: NittyBold;
+    display: table;
+    text-align: center;
+
+    hgroup {
+      display: table-cell;
+      vertical-align: middle;
+
+      h1 {
+        font-size: 5em;
+      }
+
+      h2 {
+        font-family: NittyNormal;
+      }
+
+      h2:first-of-type {
+        margin-top: 2em;
+      }
+
+      em {
+        font-family: NittyBold;
+        font-style: normal;
+        color: $red;
+      }  
+    }
+  }
 
 
-.gist .gist-file {
-  .gist-meta {
-    display: none !important;
+  .image {
+    position: relative;
+    
+
+    h1 {
+      padding: 0.3em 0.4em;
+      font-size: 3em;
+      color: #333333;
+      background-color: $yellow;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+
+      &:hover {
+        background-color: #333333;
+        color: $yellow;
+      }
+    }
+    img {
+      width: 100vw;
+    }
+  }
+
+
+
+  &.normal, &.image-slide, &.quote {
+    background-color: #e5e5e5;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    display: table;
+
+    p, li {
+      font-size: 2em;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: 1.5em;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        font-size: 2.5em;
+      }
+
+      img {
+        margin: 10px 0;
+      }
+   }
+
+   ol {
+      padding: 1em 0;
+      list-style-position: inside;
+   }
+
+    h1 {
+      font-family: NittyBold;
+    }
+
+    .slide-content {
+      display: table-cell;
+      vertical-align: middle;
+
+      em {
+        font-style: normal;
+        font-family: 'NittyBold';
+        color: $red;
+      }
+    }
+
+    hgroup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $yellow; 
+      padding: 0.5em 1.5em;
+
+
+      h1 {
+        color: #333333;
+        font-size: 1.8em;
+        font-family: 'NittyNormal';
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: $screen-xs-max) {
+          font-size: 1.3em;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+  
+  &.image-slide {
+    padding: 0;
+
+    @media (min-width: $screen-lg-min) {
+      .image {
+        width: 49.5%;
+        
+        img {
+          width: 100%;
+        }
+
+        &:first-of-type {
+          left: -2px;
+          float: left;
+        }
+
+        &:last-of-type {
+          float: right;
+        }
+      }
+    }
   }
 }
-
-// @for $i from 1 to 4 {
-//   $level-color: nth($labelColors, $i + 1);
-//   .snippet:nth-child(#{$i}n + #{$i}){
-//     .page-header {
-//       background-color: $level-color;
-//     }
-//   }
-// }
-

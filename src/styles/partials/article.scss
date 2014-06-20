@@ -1,0 +1,24 @@
+@import "./variables";
+
+.article {
+  padding: 1.5em 25px 1.5em 25px;
+  column-gap: 50px;
+  column-count: 2;
+  text-align: justify;
+
+  a {
+    font-family: NittyBold;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .article {
+    column-count: 1;
+  } 
+}
+
+@media (min-width: $screen-lg-min) { 
+  .article {
+    column-count: 3;
+  }
+}

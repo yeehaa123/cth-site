@@ -1,0 +1,34 @@
+<div class="slide {{layout}} item">
+  {{#if presentationTitle}}
+    <hgroup>
+      {{{presentationTitle}}}
+    </hgroup>
+  {{else}}
+  <hgroup>
+    {{#if image}}
+      <div class="image">
+        <img src="{{image.url}}"/>
+        <h1>{{title}}</h1>
+      </div>
+    {{else}}
+      <h1>{{title}}</h1>
+    {{/if}}
+  </hgroup>
+  {{/if}}
+  {{#if slide-content}}
+    <section class="slide-content">
+      {{{slide-content}}}
+    </section>
+  {{/if}}
+  {{#if images}}
+    <section class="slide-content">
+    <div class="images">
+      {{#each images}}
+        <div class="image">
+            <img src="{{url}}"/>
+        </div>
+      {{/each}}
+    </div>
+    </section>
+  {{/if}}
+</div>

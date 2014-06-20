@@ -1,0 +1,40 @@
+@import "./_variables";
+
+.hero-image {
+  #logo {
+    display: block;
+  }
+
+  #logo-text {
+    display: none;
+  }
+
+  svg {
+    fill: #222222; 
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+  }
+  width: 100%;
+  height: 95vh;
+  @media (orientation:portrait) {
+    height: 30vh;
+  }
+
+  background-color: $blue;
+
+  // background-image: url('../images/library6.jpg');
+
+  &:hover {
+    background: $brand-primary;
+    #logo {
+      display: none;
+    }
+
+    #logo-text {
+      display: block;
+    }
+  }
+}

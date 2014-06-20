@@ -1,0 +1,22 @@
+@import "./_variables";
+
+$navbar-height: 50px;
+
+.navbar {
+  font-size: 1.1em;
+  margin-bottom: 0;
+
+  svg {
+    fill: #333333; 
+    padding: 0;
+    width: 50px;
+
+    &:hover {
+      fill: $brand-primary; 
+    }
+  }
+
+  .navbar-brand {
+    padding: 10px 15px;
+  }
+}

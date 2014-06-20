@@ -1,0 +1,71 @@
+---
+test: test
+---
+
+<header class="container-fluid" style="padding:0;" >
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="full-width hero-image carousel slide" id="carousel-header" data-ride="carousel">
+        <ul class"carousel-indicators">
+          <li data-target="#carousel-header" data-slide-to="0"></li>
+          <li data-target="#carousel-header" data-slide-to="1"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="item active">
+            <h1>Hello World</h1>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <h1>Goodbye World</h1>
+            <div class="carousel-caption">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="#nav-wrapper">
+    <nav id="nav" class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" 
+                  data-toggle="collapse" 
+                  data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">{{> logo }}</a>
+
+        </div>
+        <div class="navbar-collapse navbar-right collapse">
+          <ul class="nav navbar-nav">
+              <a class="left carousel-control" href="#carousel-header" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-header" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            <!-- <li class="dropdown"> -->
+            <!--   <a href="#" class="dropdown&#45;toggle"  -->
+            <!--      data&#45;toggle="dropdown">sign in <b class="caret"></b></a> -->
+            <!--   <ul class="dropdown&#45;menu"> -->
+            <!--     <li><a href="#">Action</a></li> -->
+            <!--     <li><a href="#">Another action</a></li> -->
+            <!--     <li><a href="#">Something else here</a></li> -->
+            <!--     <li class="divider"></li> -->
+            <!--     <li class="dropdown&#45;header">Nav header</li> -->
+            <!--     <li><a href="#">Separated link</a></li> -->
+            <!--     <li><a href="#">One more separated link</a></li> -->
+            <!--   </ul> -->
+            <!-- </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

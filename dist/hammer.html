@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -109,6 +109,7 @@
 
       <section id="main" class='main col-md-12'>
         
+<h2>When All We Have Is A Hammer</h2>
 
 Coding the Humanities is not about technology or even programming. It is all about tools. Software is a blind spot for the humanities. While our discipline is deeply invested in self-reflection, we hardly ever think about the digital tools that we use to produce and disseminate these deep thoughts. As a result, we fail to see the obvious. The applications that facilitate our teaching and research, were not written for us, let alone developed by us. In fact, they are unfit for our needs.
 
@@ -132,6 +133,7 @@ Deliberate use of tools marks the difference between craftmanship and dumb labor
         <script src="vendor/bootstrap/collapse.js"></script>
         <script src="vendor/bootstrap/dropdown.js"></script>
         <script src="vendor/bootstrap/affix.js"></script>
+        <script src="vendor/hyphenator.js"></script>
 
         <!-- <script src="js/main.js"></script> -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -150,6 +152,12 @@ Deliberate use of tools marks the difference between craftmanship and dumb labor
             $('#nav').affix({
               offset: { top: $('#nav').offset().top }
             });
+
+            Hyphenator.config({
+              displaytogglebox : false,
+              minwordlength : 8,
+            });
+            Hyphenator.run();
         </script>
     </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "hyphenator",
+  "homepage": "https://github.com/andypillip/hyphenator",
+  "_release": "0bc0a901e1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0bc0a901e155f5618983fd5fbc763bf9990f7546"
+  },
+  "_source": "git@github.com:andypillip/hyphenator.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:andypillip/hyphenator.git",
+  "_direct": true
+}
