@@ -131,13 +131,22 @@
   &.image-slide {
     padding: 0;
 
-    .image {
+    .quote {
+      font-size: 0.7em;
+      padding: 80px 60px;
+
+      p:last-child {
+        text-align: right;
+      }
+    }
+    
+    .image, .quote {
       margin-top: 10px;
       margin-bottom: 10px;
     }
 
     @media (min-width: $screen-lg-min) {
-      .image {
+      .image, .quote {
         width: 49.5%;
         
         img {

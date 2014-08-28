@@ -23,6 +23,11 @@
   {{#if images}}
     <section class="slide-content">
     <div class="images">
+      {{#if quote}}
+      <div class="quote">
+        {{{quote}}}
+      </div>
+      {{/if}}
       {{#each images}}
         <div class="image">
             <img src="{{url}}"/>
