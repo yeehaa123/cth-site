@@ -4623,6 +4623,9 @@ button.close {
           float: left; }
         .slide.active.image-slide .image:last-of-type, .slide.active.image-slide .quote:last-of-type {
           float: right; } }
+  .slide.active.quote .slide-content p:last-child {
+    margin-top: 2em;
+    text-align: right; }
 
 body {
   background: #e5e5e5; }

@@ -164,4 +164,14 @@
       }
     }
   }
+
+  &.quote {
+    .slide-content {
+      p:last-child {
+        margin-top: 2em;
+        text-align: right;
+      }
+    }
+  }
 }
+
